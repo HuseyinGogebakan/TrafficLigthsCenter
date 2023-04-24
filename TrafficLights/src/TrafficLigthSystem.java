@@ -2,7 +2,7 @@ import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class TrafficLigthSystem implements Check {
+public class TrafficLigthSystem {
     private static HashMap<Places_Be,HashMap<String,TrafficLight>> database_be;
     private static Scanner scan= new Scanner(System.in);
 
@@ -13,13 +13,13 @@ public class TrafficLigthSystem implements Check {
             menu();
             int option = intcheck();
             switch (option){
-                case 1-> addTrafficLight();
-                case 2-> deleteTrafficLight();
-                case 3-> getTrafficLight();
-                case 4-> updateTrafficLightState();
-                case 5-> getTrafficLightsByLocation();
-                case 6-> getAllTrafficLights();
-                case 7-> CheckTraffocLigthStatus();
+                case 1-> TrafficPanel_Ops.addTrafficLight(database_be);
+                case 2-> TrafficPanel_Ops.deleteTrafficLight(database_be);
+                case 3-> TrafficPanel_Ops.getTrafficLight(database_be);
+                case 4-> TrafficPanel_Ops.updateTrafficLightState(database_be);
+                case 5-> TrafficPanel_Ops.getTrafficLightsByLocation(database_be);
+                case 6-> TrafficPanel_Ops.getAllTrafficLights(database_be);
+                case 7-> TrafficPanel_Ops.CheckTraffocLigthStatus(database_be);
                 case 0-> flag =false;
                 default->
                     System.out.println("invalid value");
@@ -33,33 +33,7 @@ public class TrafficLigthSystem implements Check {
                 + (end.getSecond() - start.getSecond()) + " sec");
     }
 
-    private static void CheckTraffocLigthStatus() {
 
-    }
-
-    private static void getTrafficLightsByLocation() {
-
-    }
-
-    private static void getAllTrafficLights() {
-
-    }
-
-    private static void updateTrafficLightState() {
-
-    }
-
-    private static void getTrafficLight() {
-
-    }
-
-    private static void deleteTrafficLight() {
-
-    }
-
-    private static void addTrafficLight() {
-
-    }
 
     private static void menu() {
         System.out.println("\033[1;36m" // Bold cyan color
