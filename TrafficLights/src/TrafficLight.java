@@ -9,7 +9,7 @@ public class TrafficLight {
     private  String statu;
 
 
-    public TrafficLight( Places_Be provinces, TrafficLightState state, String statu) {
+    public TrafficLight( Places_Be provinces, TrafficLightState state) {
         setUniqe_trafficlamp_code();
         this.provinces = provinces;
         this.state = state;
